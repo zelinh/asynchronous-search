@@ -10,7 +10,7 @@ buildscript {
         distribution = 'oss-zip'
         opensearch_group = "org.opensearch"
         isSnapshot = "true" == System.getProperty("build.snapshot", "true")
-        opensearch_version = System.getProperty("opensearch.version", "2.2.0-SNAPSHOT")
+        opensearch_version = System.getProperty("opensearch.version", "2.2.1-SNAPSHOT")
         opensearch_plugin_version = System.getProperty("bwc.version", "1.1.0.0")
         buildVersionQualifier = System.getProperty("build.version_qualifier", "")
         // 2.0.0-rc1-SNAPSHOT -> 2.0.0.0-rc1-SNAPSHOT
@@ -247,7 +247,7 @@ ext.getPluginResource = { download_to_folder, download_from_src ->
 String baseName = "asynSearchCluster"
 String bwcVersion = "1.1.0.0"
 String bwcFilePath = "src/test/resources/org/opensearch/search/asynchronous/bwc/"
-String bwcRemoteFile = "https://ci.opensearch.org/ci/dbc/bundle-build/1.1.0/20210930/linux/x64/builds/opensearch/plugins/opensearch-asynchronous-search-1.1.0.0.zip"
+String bwcRemoteFile = "https://ci.opensearch.org/ci/dbc/bundle-build/1.1.0/2.2.1930/linux/x64/builds/opensearch/plugins/opensearch-asynchronous-search-1.1.0.0.zip"
 getPluginResource(bwcFilePath + bwcVersion, bwcRemoteFile)
 // Creates two test clusters of previous version and loads opensearch plugin of bwcVersion
 2.times { i ->
